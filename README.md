@@ -18,7 +18,9 @@ Set: `WifiManager.isWifiEnabled()`
 Get: `NetworkInfo.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState()`
 
 Set (Android 4.4 and below): 
-`ConnectivityManager.class.getDeclaredMethod("setMobileDataEnabled", boolean.class);`
+```
+ConnectivityManager.class.getDeclaredMethod("setMobileDataEnabled", boolean.class).invoke(...)
+```
 
 Set (Android 5.0 and above, requires root):
 ```
